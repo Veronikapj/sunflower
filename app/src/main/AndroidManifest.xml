@@ -16,6 +16,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.google.samples.apps.sunflower">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -40,6 +41,10 @@
         </activity>
 
         <activity android:name="androidx.activity.ComponentActivity" />
+
+        <profileable
+            android:shell="true"
+            tools:targetApi="q" />
 
     </application>
 

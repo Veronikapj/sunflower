@@ -36,6 +36,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        benchmark {
+            signingConfig signingConfigs.debug
+            debuggable false
+        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -99,6 +103,7 @@ dependencies {
     implementation "com.google.accompanist:accompanist-insets:$rootProject.accompanistVersion"
     implementation "io.coil-kt:coil-compose:$rootProject.coilVersion"
     debugImplementation "androidx.compose.ui:ui-tooling:$rootProject.composeVersion"
+    implementation("androidx.profileinstaller:profileinstaller:$rootProject.profileInstallerVersion")
 
     // Testing dependencies
     androidTestImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"
